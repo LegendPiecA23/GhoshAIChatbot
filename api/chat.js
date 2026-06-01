@@ -19,10 +19,11 @@ export default async function handler(req, res) {
             }
         );
 
-        const data = await response.json();
+       const data = await response.json();
 
-        return res.status(200).json(data);
+console.log("GEMINI RESPONSE:", data);
 
+return res.status(200).json(data);
     } catch (error) {
 
         return res.status(500).json({
